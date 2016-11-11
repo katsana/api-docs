@@ -81,6 +81,13 @@ curl https://api.katsana.com/profile
 }
 ```
 
+
+### HTTP REQUEST
+
+`GET /profile`
+
 ## Update Profile
 
-### Request Headers
+### HTTP REQUEST
+
+`POST /profile`
