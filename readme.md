@@ -6,6 +6,23 @@ KATSANA API allows everyone to build apps on the KATSANA Platform. Our API is or
 
 Let's walk through core API concepts as we tackle some everyday use cases.
 
+## API Information
+
+To get started, you can first try out our default welcome API, which would return the current Platform version and list of supported API versions.
+
+```bash
+curl -i https://api.katsana.com
+```
+
+```json
+{
+    "platform": "v4.3.0",
+    "api": [
+        "v1"
+    ]
+}
+```
+
 ## Request Headers
 
 KATSANA API request 
@@ -20,19 +37,6 @@ curl -i https://api.katsana.com/profile
      -X GET 
      -H "Accept: application/vnd.KATSANA.v1+json" 
      -H "Authorization: Bearer {{access-token}}"
-```
-
-## API Information
-
-To get started, you can first try out our default welcome API.
-
-```json
-{
-    "platform": "v4.3.0",
-    "api": [
-        "v1"
-    ]
-}
 ```
 
 # Authentication
