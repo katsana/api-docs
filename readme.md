@@ -11,7 +11,7 @@ Let's walk through core API concepts as we tackle some everyday use cases.
 To get started, you can first try out our default welcome API, which would return the current Platform version and list of supported API versions.
 
 ```bash
-curl -i https://api.katsana.com
+curl https://api.katsana.com -X GET
 ```
 
 ```json
@@ -25,19 +25,22 @@ curl -i https://api.katsana.com
 
 ## Request Headers
 
-KATSANA API request 
+KATSANA API would require all API endpoint to include the following **HTTP Request Headers** all versioned API endpoint which requires authentication.
+
+```bash
+curl https://api.katsana.com
+     -X GET 
+     -H "Accept: application/vnd.KATSANA.v1+json" 
+     -H "Authorization: Bearer {{access-token}}"
+```
 
 | Type          | Value
 |:--------------|:--------
 | Accept        | application/vnd.KATSANA.v1+json
 | Authorization | Bearer {{access-token}}
 
-```bash
-curl -i https://api.katsana.com/profile 
-     -X GET 
-     -H "Accept: application/vnd.KATSANA.v1+json" 
-     -H "Authorization: Bearer {{access-token}}"
-```
+
+Please read on [Authentication](#authentication) to learn on how to obtain `{{access-token}}` for a particular user.
 
 # Authentication
 
@@ -47,8 +50,11 @@ In this section, we're going to focus on the basics of authentication.
 
 ## Show Profile
 
-```
-/profile
+```bash
+curl https://api.katsana.com/profile
+     -X GET 
+     -H "Accept: application/vnd.KATSANA.v1+json" 
+     -H "Authorization: Bearer {{access-token}}"
 ```
 
 ```json
@@ -67,6 +73,7 @@ In this section, we're going to focus on the basics of authentication.
             }
         }
     },
+    "avatar": null,
     "timezone": "Asia/Kuala_Lumpur",
     "created_at": "2015-09-06 11:06:45",
     "updated_at": "2015-09-06 11:06:45"
