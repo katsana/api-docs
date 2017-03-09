@@ -10,6 +10,16 @@ Let's walk through core API concepts as we tackle some everyday use cases.
 
 To get started, you can first try out our default welcome API, which would return the current Platform version and list of supported API versions.
 
+### Using With Postman
+
+You may want to test the API by using [Postman](https://www.getpostman.com/).
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/8fa0845d2c50cb96d236#?env%5BKatsana%20Development%20Environment%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoicGVyc29uYWxfYWNjZXNzX3Rva2VuIiwidmFsdWUiOiJ5b3VyLXBlcnNvbmFsLWFjY2Vzcy10b2tlbiIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ2ZWhpY2xlX2lkIiwidmFsdWUiOiJ5b3VyLXZlaGljbGUtaWQiLCJ0eXBlIjoidGV4dCJ9XQ==)
+
+Once you've add into your Postman, you need to configure the `personal_access_token` key and `vehicle_id` in the **Katsana Development Environment**.
+
+Please follow the [Personal Access Token](#personal-access-token) to get the `personal_access_token` and for `vehicle_id`, you may use the [Vehicles](#vehicles) API endpoint to get the `vehicle_id`.
+
 #### Request
 
     curl --request GET \
